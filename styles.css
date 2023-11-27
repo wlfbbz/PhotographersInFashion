@@ -55,44 +55,40 @@ p {
     font-style: italic;
     font-weight: 200;
     font-size: 100px;
-    line-height: auto;
+    line-height: 10px;
+}
+
+button, input[type="text"] {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 50%; /* Full width */
+    padding: 20px; /* Consistent padding */
+    margin: 10px auto 10px auto; /* Consistent vertical margin, no horizontal margin */
+    display: block; /* Display as block for full-width */
 }
 
 button {
-    border-width: 1px;
-    border-style: solid;
+    border: none;
     background-color: whitesmoke;
     transition: 0.1s background-color linear, 0.1s color linear;
     color: blueviolet;
-    padding: 13px 26px;
-    display: inline-block;
-    width: auto;
     height: auto;
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
-    appearance: none;
     border-color: #fff;
     font-weight: 400;
-    font-style: normal;
-    text-transform: none;
-    line-height: normal;
-    opacity: 1;
-    min-width: 135px;
 }
 
 input[type="text"] {
+    border: none;
+    font-size: 16px;
     padding: 10px;
-    margin: 10px 0; /* Add space around the input field */
-    border: none; /* Example border style */
-    font-size: 16px; /* Adjust font size as needed */
-    width: 80%; /* Adjust width as needed */
     background-color: transparent;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke; /* Border for the bottom only */
+    color: whitesmoke;
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     h1 {
         font-size: 36px; /* Smaller font size */
         line-height: 54px; /* Adjust line height */
@@ -100,21 +96,26 @@ input[type="text"] {
 
     p {
         font-size: 50px; /* Smaller font size */
-        line-height: 75px; /* Adjust line height */
+        line-height: 15px; /* Adjust line height */
     }
-    p span {
-    display: block; /* This makes each span start on a new line */
-}
 
     button {
         padding: 10px 20px; /* Adjust padding */
         font-size: .75em; /* Smaller font size */
     }
 
+button, input[type="text"] {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%; /* Full width */
+    padding: 20px; /* Consistent padding */
+    margin: 10px auto 10px auto; /* Consistent vertical margin, no horizontal margin */
+    display: block; /* Display as block for full-width */
+}
     .section {
         padding: 10px; /* Add padding for smaller screens */
     }
 }
+
 
 @media screen and (max-width: 480px) {
     h1 {
@@ -138,14 +139,5 @@ input[type="text"] {
     .section {
         padding: 5px; /* Add padding for very small screens */
     }
-}
 
-input[type="text"] {
-    padding: 10px;
-    margin: 10px 0; /* Add space around the input field */
-    border: none; /* Example border style */
-    font-size: 12px; /* Adjust font size as needed */
-    width: 50%; /* Adjust width as needed */
-    background-color: transparent;
-    border-bottom: 1px solid whitesmoke;
 }
