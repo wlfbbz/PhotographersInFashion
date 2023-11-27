@@ -101,7 +101,7 @@ input[type="text"] {
 
     button {
         padding: 10px 20px; /* Adjust padding */
-        font-size: .75em; /* Smaller font size */
+        font-size: 2em; /* Smaller font size */
     }
 
 button, input[type="text"] {
