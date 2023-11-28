@@ -12,7 +12,7 @@
     opacity: 0; /* Start invisible */
 }
 #section1 form {
-    animation: fadeIn 1s ease forwards 6s; /* Delay of 6s (3s after the p tag) */
+    animation: fadeIn 1s ease forwards 4.5s; /* Delay of 6s (3s after the p tag) */
     opacity: 0; /* Start invisible */
 }
 /* styling */
