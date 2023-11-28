@@ -1,27 +1,21 @@
 /*Animations*/
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 #section1 h1 {
     animation: fadeIn 1s ease forwards;
     opacity: 0; /* Start invisible */
 }
-
 #section1 p {
     animation: fadeIn 1s ease forwards 3s; /* Delay of 3s */
     opacity: 0; /* Start invisible */
 }
-
 #section1 form {
     animation: fadeIn 1s ease forwards 6s; /* Delay of 6s (3s after the p tag) */
     opacity: 0; /* Start invisible */
 }
-
 /* styling */
-
 body {
     margin: 0;
     padding: 0;
@@ -33,7 +27,6 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
-
 .section {
     display: flex;
     flex-direction: column;
@@ -45,7 +38,6 @@ body {
     width: 100%; /* Full width */
     text-align: center;
 }
-
 h1 {
     color: whitesmoke;
     font-family: 'Baskervville', serif;
@@ -54,7 +46,6 @@ h1 {
     font-size: 56px;
     line-height: 84px;
 }
-
 p {
     color: whitesmoke;
     font-family: 'Anton', sans-serif;
@@ -66,12 +57,12 @@ p {
 
 button, input[type="email"] {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 60%; /* Full width */
     width: 100%; /* Full width */
     padding: 20px; /* Consistent padding */
     margin: 10px auto; /* Consistent vertical margin, center horizontally */
     display: block; /* Display as block for full-width */
 }
-
 button {
     border: none;
     background-color: whitesmoke;
@@ -83,7 +74,6 @@ button {
     border-color: #fff;
     font-weight: 400;
 }
-
 input[type="email"] {
     border: none;
     font-size: 16px;
@@ -95,14 +85,14 @@ input[type="email"] {
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     h1 {
-        font-size: 1em; /* Smaller font size */
+        font-size: 2em; /* Smaller font size */
         line-height: 1px; /* Adjust line height */
     }
 
     p {
-        font-size: 1.4em; /* Smaller font size */
+        font-size: 4em; /* Smaller font size */
         line-height: 40px; /* Adjust line height */
         padding: 5px 30px 5px 30px;
     }
@@ -137,6 +127,51 @@ input[type="email"] {
         padding: 20px 10px 20px 10px;
     }
 
+    input[type="email"]::placeholder {
+        font-weight: 200;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1em; /* Smaller font size */
+        line-height: 1px; /* Adjust line height */
+    }
+
+    p {
+        font-size: 1.6em; /* Smaller font size */
+        font-size: 1.4em; /* Smaller font size */
+        line-height: 40px; /* Adjust line height */
+        padding: 5px 30px 5px 30px;
+    }
+    button {
+        font-size: 1em; /* Smaller font size */
+        padding: 20px;
+        margin: 0px auto 0px auto;
+    }
+    button, input[type="email"] {
+        width: 90%; /* Full width */
+        margin: 0px auto; /* Consistent vertical margin, center horizontally */
+    }
+    .section {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+    form {
+         position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        margin: 20px auto;
+    }
+    input[type="email"] {
+        background-color: #000000;
+        border-bottom: 0px; /* Border for the bottom only */
+        padding: 20px 10px 20px 10px;
+    }
     input[type="email"]::placeholder {
         font-weight: 200;
     }
