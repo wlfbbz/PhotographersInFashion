@@ -25,7 +25,9 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Viewport height */
+    height: 100vh; 
+    width: 100vw; /* Viewport width */
+    overflow: hidden;
     background-color: black; /* Black background */
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -35,8 +37,12 @@ body {
 .section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align items centrally in the column */
-    justify-content: center; /* Center content vertically in the section */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Full height */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width and height */
+    width: 100%; /* Full width */
     text-align: center;
 }
 
@@ -62,7 +68,7 @@ button, input[type="text"] {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     width: 50%; /* Full width */
     padding: 20px; /* Consistent padding */
-    margin: 10px auto 10px auto; /* Consistent vertical margin, no horizontal margin */
+    margin: 10px auto; /* Consistent vertical margin, center horizontally */
     display: block; /* Display as block for full-width */
 }
 
@@ -85,37 +91,42 @@ input[type="text"] {
     background-color: transparent;
     border-bottom: 1px solid whitesmoke; /* Border for the bottom only */
     color: whitesmoke;
+    border-radius: 0px;
 }
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 1024px) {
     h1 {
         font-size: 36px; /* Smaller font size */
-        line-height: 54px; /* Adjust line height */
+        line-height: auto; /* Adjust line height */
     }
 
     p {
-        font-size: 50px; /* Smaller font size */
-        line-height: 15px; /* Adjust line height */
+        font-size: 4em; /* Smaller font size */
+        line-height: auto; /* Adjust line height */
     }
 
+
     button {
-        padding: 10px 20px; /* Adjust padding */
         font-size: 2em; /* Smaller font size */
     }
 
-button, input[type="text"] {
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    width: 100%; /* Full width */
-    padding: 20px; /* Consistent padding */
-    margin: 10px auto 10px auto; /* Consistent vertical margin, no horizontal margin */
-    display: block; /* Display as block for full-width */
-}
+    button, input[type="text"] {
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        width: 100%; /* Full width */
+        padding: 20px; /* Consistent padding */
+        margin: 10px auto; /* Consistent vertical margin, center horizontally */
+        display: block; /* Display as block for full-width */
+    }
+
     .section {
         padding: 10px; /* Add padding for smaller screens */
     }
-}
 
+    div.content {
+        width: 70vw;
+    }
+}
 
 @media screen and (max-width: 480px) {
     h1 {
@@ -127,17 +138,18 @@ button, input[type="text"] {
         font-size: 36px; /* Smaller font size */
         line-height: 54px; /* Adjust line height */
     }
-    p span {
-    display: block; /* This makes each span start on a new line */
+
+    button, input[type="text"] {
+        width: 90%; /* Set width to 90% of the viewport */
+        padding: 8px 16px; /* Adjust padding */
+        margin: 5px auto; /* Center elements with auto margin */
     }
 
     button {
-        padding: 8px 16px; /* Adjust padding */
-        font-size: .65em; /* Smaller font size */
+        font-size: 0.65em; /* Adjust font size */
     }
 
     .section {
         padding: 5px; /* Add padding for very small screens */
     }
-
 }
