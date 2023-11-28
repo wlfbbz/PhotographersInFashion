@@ -135,6 +135,10 @@ input[type="email"] {
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 425px) {
 @media screen and (max-width: 768px) {
+    body {
+        margin-top: -40px;
+    }
+
     h1 {
         font-size: 1em; /* Smaller font size */
         line-height: 1px; /* Adjust line height */
