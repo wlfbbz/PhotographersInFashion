@@ -3,11 +3,11 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
-#section1 h1 {
+#section1 p {
     animation: fadeIn 1s ease forwards;
     opacity: 0; /* Start invisible */
 }
-#section1 p {
+#section1 h1 {
     animation: fadeIn 1s ease forwards 3s; /* Delay of 3s */
     opacity: 0; /* Start invisible */
 }
@@ -58,7 +58,6 @@ p {
 button, input[type="email"] {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     width: 60%; /* Full width */
-    width: 100%; /* Full width */
     padding: 20px; /* Consistent padding */
     margin: 10px auto; /* Consistent vertical margin, center horizontally */
     display: block; /* Display as block for full-width */
@@ -104,7 +103,7 @@ input[type="email"] {
     }
 
     button, input[type="email"] {
-        width: 90%; /* Full width */
+        width: 60%; /* Full width */
         margin: 0px auto; /* Consistent vertical margin, center horizontally */
     }
 
