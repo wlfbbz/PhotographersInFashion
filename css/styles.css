@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.grid-container {
+.container {
     display: flex; /* or 'grid' */
     flex-wrap: wrap;
     justify-content: center;

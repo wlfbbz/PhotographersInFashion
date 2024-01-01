@@ -35,7 +35,7 @@
 </head>
 <body>
     <div class="splash">
-    <div class="grid-container">
+    <div class="container">
         <div class="image-box"><img src="images/bailey.png" alt="Image description"></div>
         <div class="image-box"><img src="images/faye.png" alt="Image description"></div>
         <div class="image-box"><img src="images/irving.png" alt="Image description"></div>
@@ -56,7 +56,7 @@
  <script>
     window.onload = function() {
         var currentIndex = 0;
-        var images = document.querySelectorAll('.grid-container .image-box');
+        var images = document.querySelectorAll('.container .image-box');
         var interval = 200; // Interval in milliseconds
         var totalImages = images.length;
         var imagesShown = 0;
