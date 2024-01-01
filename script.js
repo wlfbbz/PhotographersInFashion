@@ -1,5 +1,5 @@
     window.onload = function() {
-        var currentIndex = 15;
+        var currentIndex = 0;
         var images = document.querySelectorAll('.container .image-box');
         var interval = 200; // Interval in milliseconds
         var totalImages = images.length;
