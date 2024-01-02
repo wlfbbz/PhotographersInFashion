@@ -1,38 +1,33 @@
-    window.onload = function() {
-        var currentIndex = 0;
-        var images = document.querySelectorAll('.container .image-box');
-        var interval = 200; // Interval in milliseconds
-        var totalImages = images.length;
-        var imagesShown = 0;
+const images = [
+'bailey.png',
+'faye.png',
+'irving.png',
+'herbert.png',
+'kate.png',
+'testino.png',
+'herbert2.png',
+'naomi.png',
+'testino3.png',
+'andy.png',
+'sarah.png',
+'jeurgen.png',
+'karl.png',
+'naomi2.png',
+'picasso.png',
+    // ... add all 15 image paths
+];
 
-        function showNextImage() {
-            // Hide the current image
-            if (currentIndex < images.length) {
-                images[currentIndex].style.display = 'none';
-            }
+let currentImage = 0;
 
-            // Increment the index and the counter
-            currentIndex++;
-            imagesShown++;
+function showNextImage() {
+    if (currentImage >= images.length) {
+         window.location.href = "signup.html"; // URL of the new page
+        return;
+    }
 
-            if (currentIndex >= images.length) {
-                if (imagesShown >= totalImages) {
-                    // Redirect to a new page after the last image
-                    window.location.href = 'signup.html'; // Change to your desired URL
-                    return;
-                }
-                currentIndex = 0;
-            }
 
-            // Show the next image
-            images[currentIndex].style.display = 'block';
-        }
+    const imgElement = document.getElementById('image');
+    imgElement.src = images[currentImage++];
+}
 
-        // Initially show the first image and hide others
-        images.forEach((img, index) => {
-            img.style.display = index === 0 ? 'block' : 'none';
-        });
-
-        // Set the interval for the slideshow
-        setInterval(showNextImage, interval);
-    };
+setInterval(showNextImage, 150); // Change image every 1.5 seconds

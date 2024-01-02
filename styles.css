@@ -1,33 +1,24 @@
-body {
-    margin: 0;
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Example background color */
 }
 
-.container {
-    display: flex; /* or 'grid' */
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Adjust as needed */
-    height: 100vh;
-    margin: auto; /* Centering the container */
-    
+#image-container {
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
 }
 
-.image-box {
-    width: 450px; /* Adjust the size as needed */
-    height: 600px; /* Adjust the size as needed */
-    margin: 5px;
-    transition: all 0.9s ease-in-out;   
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 1.5s;
+  object-fit: cover;
 }
 
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This ensures the aspect ratio is maintained */
-}
-
-/* Optional: Styling for hidden images */
-.image-box[style*="display: none"] {
-    display: none;
-    opacity: 0;
-}
