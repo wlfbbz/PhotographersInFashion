@@ -1,33 +1,18 @@
-const images = [
-'bailey.png',
-'faye.png',
-'irving.png',
-'herbert.png',
-'kate.png',
-'testino.png',
-'herbert2.png',
-'naomi.png',
-'testino3.png',
-'andy.png',
-'sarah.png',
-'jeurgen.png',
-'karl.png',
-'naomi2.png',
-'picasso.png',
-    // ... add all 15 image paths
-];
+let slideIndex = 0;
+showSlides();
 
-let currentImage = 0;
-
-function showNextImage() {
-    const imgElement = document.getElementById('image');
-    imgElement.src = images[currentImage];
-
-    currentImage++;
-    if (currentImage >= images.length) {
-        clearInterval(intervalId); // Clear the interval
-        window.location.href = "signup.html"; // Redirect after last image
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("image-box");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
     }
+        slideIndex++;
+    if (slideIndex > slides.length) {
+        // Redirect to a new page when the slideshow ends
+        window.location.href = "signup.html"; // Change this URL to your desired location
+        return; // Stop the function from continuing
+    }    
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 200); // Change image every 3 seconds
 }
-
-const intervalId = setInterval(showNextImage, 200); // Change image every 200 milliseconds
