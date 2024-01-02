@@ -20,14 +20,14 @@ const images = [
 let currentImage = 0;
 
 function showNextImage() {
-    if (currentImage >= images.length) {
-        window.location.href = "signup.html"; // URL of the new page
-        return;
-    }
-
     const imgElement = document.getElementById('image');
-    imgElement.src = images[currentImage++];
+    imgElement.src = images[currentImage];
+
+    currentImage++;
+    if (currentImage >= images.length) {
+        clearInterval(intervalId); // Clear the interval
+        window.location.href = "signup.html"; // Redirect after last image
+    }
 }
 
-// Start the slideshow
-setInterval(showNextImage, 300); 
+const intervalId = setInterval(showNextImage, 200); // Change image every 200 milliseconds
