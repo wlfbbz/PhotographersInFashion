@@ -14,10 +14,16 @@ body {
 }
 
 .image-box {
-    width: 450px; /* Adjust the size as needed */
-    height: 600px; /* Adjust the size as needed */
+    width: 450px;
+    height: 600px;
     margin: 5px;
-    transition: all 0.9s ease-in-out;   
+    transition: all 0.9s ease-in-out;
+    display: none; /* Hide all images initially */
+}
+
+/* Show only the first image-box */
+.container .image-box:first-child {
+    display: block;
 }
 
 .image-box img {
