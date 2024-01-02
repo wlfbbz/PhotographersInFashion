@@ -17,17 +17,26 @@ const images = [
     // ... add all 15 image paths
 ];
 
+const preloadedImages = [];
 let currentImage = 0;
+
+// Preload images
+for (const src of images) {
+    const img = new Image();
+    img.src = src;
+    preloadedImages.push(img);
+}
 
 function showNextImage() {
     if (currentImage >= images.length) {
-         window.location.href = "signup.html"; // URL of the new page
+        window.location.href = "signup.html"; // URL of the new page
         return;
     }
 
-
     const imgElement = document.getElementById('image');
-    imgElement.src = images[currentImage++];
+    imgElement.src = preloadedImages[currentImage].src;
+    currentImage++;
 }
 
-setInterval(showNextImage, 150); // Change image every 1.5 seconds
+// Start the slideshow
+setInterval(showNextImage, 150); // Change image every 150 milliseconds
