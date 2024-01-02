@@ -8,12 +8,10 @@ body, html {
 }
 
 /* Optional: Style the container */
-.container {
+.maincontainer {
   max-width: 600px; /* Adjust the width as needed */
   margin: auto;
-  position: relative; 
 }
-
 
 img {
   width: 600px;
@@ -22,7 +20,6 @@ img {
 }
 
 .image-box {
-  display: none; /* Hide all images initially */
   text-align: center; /* Center the images */
 }
 
