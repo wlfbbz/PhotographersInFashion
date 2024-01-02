@@ -17,15 +17,7 @@ const images = [
     // ... add all 15 image paths
 ];
 
-const preloadedImages = [];
 let currentImage = 0;
-
-// Preload images
-for (const src of images) {
-    const img = new Image();
-    img.src = src;
-    preloadedImages.push(img);
-}
 
 function showNextImage() {
     if (currentImage >= images.length) {
@@ -34,9 +26,8 @@ function showNextImage() {
     }
 
     const imgElement = document.getElementById('image');
-    imgElement.src = preloadedImages[currentImage].src;
-    currentImage++;
+    imgElement.src = images[currentImage++];
 }
 
 // Start the slideshow
-setInterval(showNextImage, 150); // Change image every 150 milliseconds
+setInterval(showNextImage, 200); 
