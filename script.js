@@ -30,4 +30,4 @@ function showNextImage() {
 }
 
 // Start the slideshow
-setInterval(showNextImage, 200); 
+setInterval(showNextImage, 300); 
