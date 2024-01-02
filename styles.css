@@ -23,3 +23,19 @@ img {
   text-align: center; /* Center the images */
 }
 
+
+@media screen and (max-width: 768px) {
+
+.maincontainer {
+  max-width: 400px; /* Adjust the width as needed */
+  margin: auto;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+}
+    
